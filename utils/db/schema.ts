@@ -4,7 +4,7 @@ export const Users = pgTable('users', {
     id: serial('id').primaryKey(),
     email: varchar('email', { length: 255 }).notNull().unique(),
     name : varchar('name', { length: 255 }).notNull(),
-    createdAt : timestamp('created_at').notNull().defaultNow().notNull()
+    createdAt : timestamp('created_at').defaultNow().notNull()
 })
 
 export const Reports = pgTable('reports', {
